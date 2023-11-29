@@ -68,6 +68,10 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *printscr[] = { "flameshot", "gui", NULL };
 static const char *lockscr[] = { "slock", "gui", NULL};
 
+/* Scratchpad */
+static const char scratchpadname[] = "scratchpad";
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+
 static const Key keys[] = {
 	/* modifier						key		   function		   argument */
 	{ MODKEY,						XK_p,	   spawn,		   {.v = dmenucmd } },
@@ -108,6 +112,7 @@ static const Key keys[] = {
     { MODKEY|ControlMask|ShiftMask, XK_q,       quit,          {1} },
     { MODKEY|ControlMask,           XK_j,       pushdown,      {0} },
     { MODKEY|ControlMask,           XK_k,       pushup,      {0} },
+	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 };
 
 /* button definitions */
