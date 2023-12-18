@@ -31,7 +31,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      	     instance    title    tags mask     isfloating   CenterThisWindow?     monitor */
-	{ "st",              NULL,       NULL,    0,            0,     	     1,		               -1 },
+	{ "st",              NULL,       NULL,    0,            0,     	     0,		               -1 },
 };
 
 /* layout(s) */
